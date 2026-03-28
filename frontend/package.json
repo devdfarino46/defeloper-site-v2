@@ -1,0 +1,30 @@
+{
+    "name": "frontend",
+    "main": "index.js",
+    "scripts": {
+        "scss:pre-build": "sass scss:pre-build/css",
+        "scss:build": "postcss pre-build/css/*.css --dir ../public/css",
+        "build:ts": "webpack --config webpack.config.js",
+        "build:css": "npm-run-all --serial scss:pre-build scss:build",
+        "build:js": "npm-run-all --serial build:ts",
+        "build": "npm-run-all --serial build:css build:js",
+        "dev:css": "sass scss:prebuild/css --watch",
+        "dev:js": "cross-env NODE_ENV=dev webpack --config webpack.config.js",
+        "dev:bs": "node browser-sync.js",
+        "dev": "npm-run-all --parallel dev:css dev:js dev:bs"
+    },
+    "type": "commonjs",
+    "devDependencies": {
+        "autoprefixer": "^10.4.21",
+        "browser-sync": "^3.0.4",
+        "cross-env": "^10.1.0",
+        "cssnano": "^7.1.2",
+        "http-proxy-middleware": "^2.0.7",
+        "npm-run-all": "^4.1.5",
+        "postcss-cli": "^11.0.1",
+        "postcss-preset-env": "^10.4.0",
+        "sass": "^1.93.3",
+        "webpack": "^5.102.1",
+        "webpack-cli": "^6.0.1"
+    }
+}

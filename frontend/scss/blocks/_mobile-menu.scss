@@ -1,0 +1,63 @@
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 499;
+    background: rgba($color: #08080ff7, $alpha: .97);
+    backdrop-filter: blur(20px);
+    padding-top: 72px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    transition: opacity .3s ease, transform .3s ease;
+    overflow-y: auto;
+
+    &:not(.--opened) {
+        transform: translateX(100%);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    @media (min-width: 1025px) {
+        transform: translateX(100%);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        flex: 1 0 auto;
+    }
+
+    .nav-link {
+        a {
+            font-size: 22px;
+            padding: 15px 20px;
+            background: transparent;
+            color: #FFFFFF;
+            font-weight: 700;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    color: #7c6dff;
+                    background: #181826;
+                }
+            }
+        }
+    }
+
+    .nav-btn {
+        a {
+            color: #7c6dff;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+html,
+body {
+    background-color: #08080f;
+    color: #FFFFFF;
+    font-family: 'Montserrat Alternates', Arial, Helvetica, sans-serif;
+    scroll-behavior: auto;
+    line-height: 165%;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 1120px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 100vh;
+
+    .page {
+        flex: 1 0 auto;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #7c6dff;
+    border-radius: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}

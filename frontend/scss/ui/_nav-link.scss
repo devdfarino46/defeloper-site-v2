@@ -1,0 +1,23 @@
+.nav-link {
+    display: flex;
+
+    a {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        font-weight: 500;
+        color: #72728f;
+        padding: 6px 11px;
+        border-radius: 7px;
+        transition: color .2s, background .2s;
+        white-space: nowrap;
+        text-decoration: none;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: #eaeaf6;
+                background: #181826;
+            }
+        }
+    }
+}

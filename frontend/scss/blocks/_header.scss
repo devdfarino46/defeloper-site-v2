@@ -1,0 +1,36 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 500;
+    background: rgba(8, 8, 15, .9);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba($color: #FFFFFF, $alpha: .06);
+    transition: background .3s;
+
+    .container {
+        display: flex;
+        align-items: center;
+        height: 62px;
+    }
+
+    .logo {
+        margin-right: auto;
+    }
+
+    &__nav {
+        display: flex;
+        gap: 2px;
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    .burger-btn {
+        @media (min-width: 1025px) {
+            display: none;
+        }
+    }
+}
