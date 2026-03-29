@@ -1,0 +1,22 @@
+.btn {
+    cursor: pointer;
+    user-select: none;
+    background: #7c6dff;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 26px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: .22s ease;
+    box-shadow: 0 4px 22px rgba(124, 109, 255, .35);
+
+    @media (any-hover: hover) {
+        &:hover {
+            background: #9585ff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(124, 109, 255, .45);
+        }
+    }
+}

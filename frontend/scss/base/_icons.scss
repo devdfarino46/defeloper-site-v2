@@ -1,0 +1,40 @@
+@use 'sass:map';
+
+$icons: (
+    arrow-right: url("data:image/svg+xml,%3Csvg%20width%3D%22800%22%20height%3D%22800%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M4%2012h16m0%200-6-6m6%206-6%206%22%20stroke%3D%22currentColor%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E"),
+    check: url("data:image/svg+xml,%3Csvg%20width%3D%22800%22%20height%3D%22800%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M4%2012.611%208.923%2017.5%2020%206.5%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E")
+);
+
+@mixin icon-base {
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background: currentColor;
+}
+
+@mixin icon($name) {
+    @include icon-base;
+    mask-image: map.get($icons, $name);
+}
+
+[class^="icon-"] {
+    font-size: inherit;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    position: relative;
+    color: inherit;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        @include icon-base;
+    }
+}
+
+@each $name, $svg in $icons {
+    .icon-#{$name}::before {
+        mask-image: $svg;
+    }
+}

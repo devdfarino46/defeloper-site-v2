@@ -1,0 +1,103 @@
+@use '../base/icons' as icons;
+
+.hero {
+    padding-top: 40px;
+    padding-bottom: 60px;
+
+    @media (max-width: 992px) {
+        padding-top: 20px;
+        padding-bottom: 60px;
+    }
+
+    .hero-author {
+        margin-bottom: 30px;
+    }
+
+    &__main {
+        display: grid;
+        grid-template-columns: 1fr 380px;
+        gap: 60px;
+
+        @media (max-width: 1024px) {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+    }
+
+    &__title {
+        font-size: 52px;
+        line-height: 105%;
+        font-weight: 700;
+        margin-bottom: 22px;
+        letter-spacing: -2px;
+
+        em {
+            color: #7c6dff;
+        }
+
+        @media (max-width: 992px) {
+            font-size: 36px;
+        }
+    }
+
+    &__text {
+        font-size: 17px;
+        line-height: 1.78;
+        color: #9898b8;
+        margin-bottom: 38px;
+        max-width: 540px;
+    }
+
+    &__subbtn {
+        margin-top: 38px;
+        margin-bottom: 38px;
+
+        a {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            text-decoration: none;
+            color: #72728f;
+            transition: .3s ease;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+
+    &__subitems {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px 24px;
+
+        li {
+            position: relative;
+            padding-left: 30px;
+            font-size: 13px;
+            color: #72728f;
+
+            &::before {
+                @include icons.icon('check');
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                translate: 0 -50%;
+                width: 20px;
+                height: 20px;
+                color: #1eca49;
+            }
+        }
+    }
+
+    .hero-card {
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
+}

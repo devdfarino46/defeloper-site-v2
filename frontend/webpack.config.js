@@ -8,7 +8,7 @@ module.exports = {
     cache: isDev ? true : false,
     watch: isDev ? true : false,
     entry: {
-    main: path.resolve(__dirname, 'js/main.js')
+    main: path.resolve(__dirname, 'ts/main.ts')
     },
     output: {
     filename: '[name].js',
@@ -17,14 +17,14 @@ module.exports = {
         path.resolve(__dirname, '../public/js')
     },
     resolve: {
-    extensions: ['.js'],
+    extensions: ['.ts', '.js'],
     },
     module: {
     rules: [
         {
-            test: /\.js$/,
+            test: /\.ts$/,
             exclude: /node_modules/,
-            use: []
+            use: 'ts-loader'
         }
     ],
     },
