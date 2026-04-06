@@ -3,10 +3,27 @@
 .hero {
     padding-top: 40px;
     padding-bottom: 60px;
+    position: relative;
 
     @media (max-width: 992px) {
         padding-top: 20px;
         padding-bottom: 60px;
+    }
+
+    &__glow {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: radial-gradient(ellipse 70% 55% at 65% 45%, rgba(124, 109, 255, .13) 0%, transparent 70%), radial-gradient(ellipse 40% 35% at 15% 75%, rgba(45, 212, 160, .07) 0%, transparent 65%);
+    }
+
+    &__grid {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: .03;
+        background-image: linear-gradient(rgba(255, 255, 255, .6) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .6) 1px, transparent 1px);
+        background-size: 56px 56px;
     }
 
     .hero-author {
@@ -54,12 +71,14 @@
         margin-bottom: 38px;
 
         a {
-            display: inline-flex;
-            align-items: center;
             gap: 5px;
             text-decoration: none;
             color: #72728f;
             transition: .3s ease;
+            
+            i {
+                vertical-align: middle;
+            }
 
             @media (any-hover: hover) {
                 &:hover {

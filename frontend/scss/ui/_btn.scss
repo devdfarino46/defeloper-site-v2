@@ -5,12 +5,17 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 14px 26px;
+    padding: 18px 26px;
     border-radius: 10px;
     font-weight: 700;
     font-size: 14px;
+    line-height: 120%;
     transition: .22s ease;
     box-shadow: 0 4px 22px rgba(124, 109, 255, .35);
+
+    [class^="icon-"], .icon {
+        font-size: 1.2em;
+    }
 
     @media (any-hover: hover) {
         &:hover {

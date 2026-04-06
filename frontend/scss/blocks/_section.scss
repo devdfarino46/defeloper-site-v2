@@ -1,0 +1,40 @@
+.section-title {
+    font-size: clamp(28px, 3.8vw, 46px);
+    font-weight: 700;
+    line-height: 105%;
+    color: #eaeaf6;
+    margin-bottom: 14px;
+
+    &.--medium {
+        font-size: clamp(24px, 3.2vw, 38px);
+    }
+
+    strong {
+        color: #7c6dff;
+    }
+}
+
+.section-short-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #b8b0ff;
+    margin-bottom: 18px;
+
+    &::before {
+        content: '';
+        width: 22px;
+        height: 1px;
+        background: #b8b0ff;
+    }
+}
+
+.section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.11) 30%, rgba(255,255,255,0.11) 70%, transparent);
+    margin: 0;
+}

@@ -1,3 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-    require('./ui/mobileMenu')();
-});
+import mobileMenu from "./ui/mobileMenu";
+
+mobileMenu();
