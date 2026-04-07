@@ -95,5 +95,17 @@
         position: sticky;
         top: 80px;
         overflow: hidden;
+
+        @media (max-width: 992px) {
+            position: static;
+        }
+    }
+    
+    &:nth-child(2n) .service-card {
+        order: -1;
+
+        @media (max-width: 992px) {
+            order: unset;
+        }
     }
 }

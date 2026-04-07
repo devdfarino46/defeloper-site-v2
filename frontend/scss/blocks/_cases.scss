@@ -1,0 +1,26 @@
+.cases {
+    background: #0d0d16;
+    padding: 100px 0;
+
+    &__desc {
+        font-size: 16px;
+        color: #9898b8;
+        line-height: 1.75;
+        max-width: 620px;
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+        margin-top: 48px;
+
+        @media (max-width: 992px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 720px) {
+            grid-template-columns: 1fr;
+        }
+    }
+}

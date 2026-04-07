@@ -1,0 +1,31 @@
+.fix-services {
+    background: #0d0d16;
+    padding: 100px 0;
+
+    &__desc {
+        color: #9898b8;
+        font-size: 16px;
+        line-height: 1.75;
+        max-width: 620px;
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-top: 48px;
+
+        @media (max-width: 992px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__bottom {
+        text-align: center;
+        font-size: 13px;
+        color: #72728f;
+        margin-top: 22px;
+    }
+}

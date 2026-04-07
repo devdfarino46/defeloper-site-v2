@@ -1,0 +1,40 @@
+.how-work {
+    padding: 100px 0;
+
+    &__desc {
+        color: #9898b8;
+        line-height: 1.75;
+        max-width: 620px;
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 0;
+        margin-top: 56px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 27px;
+            left: calc(100% / 12);
+            right: calc(100% / 12);
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.11) 15%, rgba(255,255,255,0.11) 85%, transparent);
+        }
+
+        @media (max-width: 992px) {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        @media (max-width: 720px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}

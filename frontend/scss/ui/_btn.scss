@@ -5,7 +5,8 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 18px 26px;
+    padding: 17px 25px;
+    border: 1px solid transparent;
     border-radius: 10px;
     font-weight: 700;
     font-size: 14px;
@@ -22,6 +23,21 @@
             background: #9585ff;
             transform: translateY(-2px);
             box-shadow: 0 8px 32px rgba(124, 109, 255, .45);
+        }
+    }
+
+    &.--outline {
+        border-color: rgba(255,255,255,0.11);
+        color: #eaeaf6;
+        background-color: transparent;
+        box-shadow: none;
+
+        @media (any-hover: hover) {
+            &:hover {
+                transform: none;
+                border-color: #7c6dff;
+                color: #7c6dff;
+            }
         }
     }
 }

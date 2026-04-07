@@ -1,0 +1,46 @@
+.service-subcard {
+    background: #12121c;
+    border-radius: 11px;
+    padding: 18px;
+    margin-bottom: 20px;
+
+    &__label {
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: #72728f;
+        font-weight: 700;
+        margin-bottom: 12px;
+    }
+
+    &__list {
+        gap: 9px;
+        display: flex;
+        flex-direction: column;
+
+        li {
+            gap: 9px;
+            font-size: 13px;
+            color: #9898b8;
+            display: flex;
+            align-items: center;
+            gap: 9px;
+
+            i {
+                width: 1em;
+                color: #7c6dff;
+                font-weight: 700;
+                font-size: 12px;
+            }
+
+            &.--accent {
+                color: #2dd4a0;
+                font-weight: 600;
+
+                i {
+                    color: #2dd4a0;
+                }
+            }
+        }
+    }
+}
