@@ -2,6 +2,10 @@
     background: #0d0d16;
     padding: 100px 0;
 
+    @media (max-width: 992px) {
+        padding: 70px 0;
+    }
+
     &__desc {
         font-size: 16px;
         color: #9898b8;

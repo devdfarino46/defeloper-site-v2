@@ -1,0 +1,28 @@
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 20px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid rgba(255,255,255,0.11);
+    color: #eaeaf6;
+    background: #181826;
+    transition: all .2s;
+    text-decoration: none;
+
+    img {
+        height: 18px;
+        width: auto;
+        display: inline-block;
+        flex-shrink: 0;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            border-color: #7c6dff;
+            color: #7c6dff;
+        }
+    }
+}

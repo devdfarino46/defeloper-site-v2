@@ -1,0 +1,63 @@
+.input {
+    display: flex;
+    flex-direction: column;
+
+    &__label {
+        display: block;
+        font-size: 10px;
+        line-height: 120%;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: #72728f;
+        margin-bottom: 7px;
+    }
+
+    &__input {
+        position: relative;
+    }
+
+    &__input input {
+        width: 100%;
+        background: #12121c;
+        border: 1px solid rgba(255,255,255,0.11);
+        border-radius: 9px;
+        padding: 13px 36px 13px 15px;
+        color: #eaeaf6;
+        font-size: 14px;
+        line-height: 120%;
+        outline: none;
+        transition: border-color .2s, box-shadow .2s;
+
+        &::placeholder {
+            color: rgba($color: #72728f, $alpha: .6);
+        }
+    }
+
+    &__input .icon-close {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        translate: 0 -50%;
+        font-size: 16px;
+        color: #72728f;
+        cursor: pointer;
+        transition: all .2s;
+        opacity: 1;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: #eaeaf6;
+            }
+        }
+    }
+
+    &:has(input:placeholder-shown) .icon-close {
+        opacity: 0;
+    }
+
+    input:focus {
+        border-color: #7c6dff;
+        box-shadow: 0 0 0 3px rgba(124, 109, 255, .13);
+    }
+}

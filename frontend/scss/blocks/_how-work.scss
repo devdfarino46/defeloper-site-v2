@@ -1,6 +1,10 @@
 .how-work {
     padding: 100px 0;
 
+    @media (max-width: 992px) {
+        padding: 70px 0;
+    }
+
     &__desc {
         color: #9898b8;
         line-height: 1.75;

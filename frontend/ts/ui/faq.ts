@@ -40,4 +40,14 @@ export default () => document.addEventListener('DOMContentLoaded', () => {
             toggleOpen(item);
         }
     });
+
+    faq.addEventListener('keydown', ev => {
+        const target = ev.target as Element;
+        const item = target.closest<HTMLElement>('.faq-item');
+        
+        if (item && target.closest('.faq-item__label') && ev.key === "Enter") {
+            ev.preventDefault();
+            toggleOpen(item);
+        }
+    });
 });

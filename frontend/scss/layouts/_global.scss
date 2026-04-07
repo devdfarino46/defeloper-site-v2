@@ -29,6 +29,20 @@ body {
     }
 }
 
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 600;
+    background: rgba($color: #000000, $alpha: .3);
+    backdrop-filter: blur(10px);
+    transition: opacity .3s ease;
+
+    &:not(.--show) {
+        pointer-events: none;
+        opacity: 0;
+    }
+}
+
 * {
     box-sizing: border-box;
 }
