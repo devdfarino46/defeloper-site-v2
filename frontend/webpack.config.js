@@ -14,7 +14,7 @@ module.exports = {
     filename: '[name].js',
     path: isDev ? 
         path.resolve(__dirname, 'prebuild/js') :
-        path.resolve(__dirname, '../public/js')
+        path.resolve(__dirname, '../theme/assets/js')
     },
     resolve: {
     extensions: ['.ts', '.js'],

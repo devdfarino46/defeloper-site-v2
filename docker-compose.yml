@@ -1,0 +1,42 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: defeloper_db
+    env_file:
+      - .env
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_RANDOM_ROOT_PASSWORD: 1
+    volumes:
+      - db_data:/var/lib/mysql
+
+  webserver:
+    image: nginx:alpine
+    container_name: defeloper_nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - wp_data:/var/www/html
+      - ./theme:/var/www/html/wp-content/themes/defeloper
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - wordpress
+      - db
+    
+  wordpress:
+    image: wordpress:php8.2-fpm
+    container_name: defeloper_wp
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: ${MYSQL_USER}
+      WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD}
+      WORDPRESS_DB_NAME: wordpress
+    volumes:
+      - wp_data:/var/www/html
+      - ./theme:/var/www/html/wp-content/themes/defeloper
+    depends_on:
+      - db
+
+volumes:
+  wp_data:
+  db_data:
