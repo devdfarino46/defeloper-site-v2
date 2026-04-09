@@ -1,12 +1,10 @@
 <?php
-/*
-Template Name: Home
-Template Post Type: page
-*/
 
-get_header();
-?>
+namespace DefeloperTheme\Templates\Pages;
 
+use DefeloperTheme\Templates\Base;
+
+(new Base())->render(function() { ?>
 
 <div class="hero">
     <div class="hero__glow"></div>
@@ -687,4 +685,5 @@ get_header();
     </div>
 </section>
 
-<?php get_footer(); ?>
+<?php });
+?>

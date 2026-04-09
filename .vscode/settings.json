@@ -1,5 +1,9 @@
 {
     "intelephense.stubs": [
-        "wordpress"
-    ]
+        "wordpress",
+        "SPL",
+        "Core",
+        "standard"
+    ],
+    "intelephense.phpVersion": "8.2"
 }
