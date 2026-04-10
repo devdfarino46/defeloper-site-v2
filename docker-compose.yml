@@ -2,11 +2,11 @@ services:
   db:
     image: mysql:8.0
     container_name: defeloper_db
-    env_file:
-      - .env
     environment:
       MYSQL_DATABASE: wordpress
       MYSQL_RANDOM_ROOT_PASSWORD: 1
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     volumes:
       - db_data:/var/lib/mysql
 

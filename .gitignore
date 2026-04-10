@@ -1,3 +1,5 @@
 .env
 /theme/assets/css
 /theme/assets/js
+/theme/vendor
+/theme/cache

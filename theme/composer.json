@@ -1,0 +1,16 @@
+{
+    "name": "defeloper/theme",
+    "type": "wordpress-theme",
+    "require": {
+        "php": ">= 8.2",
+        "twig/twig": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DefeloperTheme\\": "inc/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+}

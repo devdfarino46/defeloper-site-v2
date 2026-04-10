@@ -3,7 +3,12 @@
         "wordpress",
         "SPL",
         "Core",
-        "standard"
-    ],
-    "intelephense.phpVersion": "8.2"
+        "standard",
+        "mbstring",
+        "date",
+        "pcre",
+        "json",
+        "dom",
+        "session"
+    ]
 }

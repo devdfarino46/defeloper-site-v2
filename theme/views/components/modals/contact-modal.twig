@@ -1,0 +1,54 @@
+<div class="contact-modal">
+    <div class="contact-modal__close">
+        <i class="icon-close"></i>
+    </div>
+    <form action="javascript:void(0);" class="contact-form">
+        <div class="contact-form__bg"></div>
+        <div class="contact-form__wrapper">
+            <h2 class="contact-form__title">Получить расчёт</h2>
+            <p class="contact-form__desc">Заполните форму — отвечу в течение 15 минут</p>
+            <div class="contact-form__inputs">
+                <div class="input">
+                    <span class="input__label">Имя</span>
+                    <span class="input__input">
+                        <input type="text" name="name" placeholder="Иван">
+                        <i class="icon-close"></i>
+                    </span>
+                </div>
+                <div class="input">
+                    <span class="input__label">Телефон / Telegram</span>
+                    <span class="input__input">
+                        <input type="text" name="phone" placeholder="+7 или @username">
+                        <i class="icon-close"></i>
+                    </span>
+                </div>
+                <div class="select">
+                    <input type="hidden" name="service">
+                    <div class="select__label">Что нужно?</div>
+                    <div class="select__button" tabindex="0">
+                        <span>Выберите услугу</span>
+                        <div class="icon-chevron-down"></div>
+                    </div>
+                    <div class="select__options">
+                        <div class="select__option --hover" data-value="Другое">Выберите услугу</div>
+                        <div class="select__option">Лендинг / сайт под ключ</div>
+                        <div class="select__option">Интернет-магазин</div>
+                        <div class="select__option">Интеграция CRM / API</div>
+                        <div class="select__option">Верстка по макету</div>
+                        <div class="select__option">Оптимизация / аудит</div>
+                        <div class="select__option">Другое</div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="contact-form__submit-btn btn">
+                <span>Получить расчёт за 15 минут</span>
+                <i class="icon-arrow-right"></i>
+            </button>
+            <div class="contact-form__policy-note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</div>
+            <div class="contact-form__time-note">
+                <i>⚡</i>
+                <span>Обычно отвечаю за 15–30 минут</span>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,72 @@
+<div class="hero">
+    <div class="hero__glow"></div>
+    <div class="hero__grid"></div>
+    <div class="container">
+        <div class="hero-author">
+            <div class="hero-author__ava"><img src="{{ get_template_directory_uri() }}/assets/img/ava.webp" alt=""></div>
+            <div class="hero-author__content">
+                <div class="hero-author__name">Дмитрий Фарино</div>
+                <div class="hero-author__desc">Веб-разработчик · Беларусь · Работает удалённо по всему СНГ</div>
+            </div>
+            {% if getStatus() %}
+            <div class="work-status">Открыть для проектов</div>
+            {% endif %}
+        </div>
+
+        <div class="hero__main">
+            <div class="hero__main-wrap">
+                <h1 class="hero__title">
+                    Сайты, которые <br>
+                    приносят <em>заявки</em>, <br>
+                    а не просто висят
+                </h1>
+                <p class="hero__text">
+                    Разрабатываю сайты, лендинги и интернет-магазины под ключ — напрямую, 
+                    без студий и наценок за менеджеров. Вы общаетесь лично со мной. 
+                    Я сам пишу код, сам сдаю результат.
+                </p>
+                <div class="btn">
+                    <span>Получить расчёт за 1 час</span>
+                    <i class="icon-arrow-right"></i>
+                </div>
+
+                <p class="hero__subbtn"><a href="#">или получите бесплатный аудит сайта <i class="icon-arrow-right"></i></a></p>
+                <ul class="hero__subitems">
+                    <li>Фиксированная цена</li>
+                    <li>Поддержка 45 дней бесплатно</li>
+                    <li>Ответ в течение 1 часа</li>
+                </ul>
+            </div>
+
+            <div class="hero-card">
+                <div class="hero-card__label">О разработчике</div>
+                <div class="hero-card__num-items">
+                    <div class="hero-card__num-item">
+                        <span>20+</span>
+                        <span>проектов сдано</span>
+                    </div>
+                    <div class="hero-card__num-item">
+                        <span>3,5 года</span>
+                        <span>в веб-разработке</span>
+                    </div>
+                    <div class="hero-card__num-item">
+                        <span>7-10 дн</span>
+                        <span>мин. срок лендинга</span>
+                    </div>
+                    <div class="hero-card__num-item">
+                        <span>45 дн</span>
+                        <span>поддержка бесплатно</span>
+                    </div>
+                </div>
+                <div class="hero-card__label">Что делаю</div>
+                <ul class="hero-card__list">
+                    <li>Сайты и лендинги под ключ</li>
+                    <li>Интернет-магазины</li>
+                    <li>Интеграции CRM, API, оплата</li>
+                    <li>Верстка по макету Figma</li>
+                    <li>Оптимизация и аудит</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

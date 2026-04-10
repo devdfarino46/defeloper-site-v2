@@ -1,0 +1,78 @@
+<section class="contact">
+    <div class="container">
+        <div class="contact__left">
+            <h2 class="section-short-title">Контакты</h2>
+            <p class="section-title">Обсудим <br>ваш проект?</p>
+            <p class="contact__desc">Расскажите задачу — предложу решение, назову стоимость и срок. Даже если пока только идея. Консультация бесплатно.</p>
+            <div class="contact__socials">
+                <a href="#" class="social-btn">
+                    <img src="{{ get_template_directory_uri() }}/assets/img/socials/telegram.svg" alt="" width="24" height="24">
+                    <span>Telegram</span>
+                </a>
+                <a href="#" class="social-btn">
+                    <img src="{{ get_template_directory_uri() }}/assets/img/socials/telegram.svg" alt="" width="24" height="24">
+                    <span>WhatsApp</span>
+                </a>
+                <a href="#" class="social-btn">
+                    <img src="{{ get_template_directory_uri() }}/assets/img/socials/telegram.svg" alt="" width="24" height="24">
+                    <span>Viber</span>
+                </a>
+            </div>
+            <ul class="contact__list">
+                <li><i class="icon-check"></i>Ответ в течение 1 часа</li>
+                <li><i class="icon-check"></i>Работаю с 12:00 до 23:00 по МСК</li>
+                <li><i class="icon-check"></i>Консультация и оценка — бесплатно</li>
+                <li><i class="icon-check"></i>Договор на каждый проект</li>
+            </ul>
+        </div>
+        <form action="javascript:void(0);" class="contact-form">
+            <div class="contact-form__bg"></div>
+            <div class="contact-form__wrapper">
+                <h2 class="contact-form__title">Получить расчёт</h2>
+                <p class="contact-form__desc">Заполните форму — отвечу в течение 15 минут</p>
+                <div class="contact-form__inputs">
+                    <div class="input">
+                        <span class="input__label">Имя</span>
+                        <span class="input__input">
+                            <input type="text" name="name" placeholder="Иван">
+                            <i class="icon-close"></i>
+                        </span>
+                    </div>
+                    <div class="input">
+                        <span class="input__label">Телефон / Telegram</span>
+                        <span class="input__input">
+                            <input type="text" name="phone" placeholder="+7 или @username">
+                            <i class="icon-close"></i>
+                        </span>
+                    </div>
+                    <div class="select">
+                        <input type="hidden" name="service">
+                        <div class="select__label">Что нужно?</div>
+                        <div class="select__button" tabindex="0">
+                            <span>Выберите услугу</span>
+                            <div class="icon-chevron-down"></div>
+                        </div>
+                        <div class="select__options">
+                            <div class="select__option --hover" data-value="Другое">Выберите услугу</div>
+                            <div class="select__option">Лендинг / сайт под ключ</div>
+                            <div class="select__option">Интернет-магазин</div>
+                            <div class="select__option">Интеграция CRM / API</div>
+                            <div class="select__option">Верстка по макету</div>
+                            <div class="select__option">Оптимизация / аудит</div>
+                            <div class="select__option">Другое</div>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="contact-form__submit-btn btn">
+                    <span>Получить расчёт за 15 минут</span>
+                    <i class="icon-arrow-right"></i>
+                </button>
+                <div class="contact-form__policy-note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</div>
+                <div class="contact-form__time-note">
+                    <i>⚡</i>
+                    <span>Обычно отвечаю за 15–30 минут</span>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

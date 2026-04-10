@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{ wp_head() }}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ get_template_directory_uri() }}/assets/libs/css/reset.css">
+    <link rel="stylesheet" href="{{ get_template_directory_uri() }}/assets/css/style.css">
+    <title>Document</title>
+
+    <style>
+        .header {
+            margin-top: var(--wp-admin--admin-bar--height, 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        {% include "components/header.twig" %}
+        
+        <main class="page">
+            {% block body %}
+            {% endblock %}
+        </main>
+
+        {% include "components/footer.twig" %}
+
+        <div class="modal-overlay"></div>
+        <div class="modals" role="presentation">
+            {% include "components/modals/contact-modal.twig" %}
+        </div>
+    </div>
+
+    {{ wp_footer() }}
+    <script src="{{ get_template_directory_uri() }}/assets/js/main.js"></script>
+</body>
+</html>
