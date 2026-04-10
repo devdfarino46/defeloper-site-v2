@@ -40,6 +40,14 @@
     &__desc {
         font-size: 13px;
         color: #72728f;
+        margin-bottom: 12px;
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
         margin-bottom: 24px;
     }
 

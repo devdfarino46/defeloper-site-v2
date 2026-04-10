@@ -25,4 +25,12 @@
             color: #7c6dff;
         }
     }
+
+    &.--medium {
+        padding: 6px 8px;
+        border-radius: 4px;
+        font-size: 10px;
+        gap: 8px;
+        font-weight: 500;
+    }
 }

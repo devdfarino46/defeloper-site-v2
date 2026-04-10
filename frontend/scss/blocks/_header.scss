@@ -17,6 +17,12 @@
 
     .logo {
         margin-right: auto;
+
+        @media (max-width: 450px) {
+            img {
+                width: 80px;
+            }
+        }
     }
 
     &__nav {
@@ -24,6 +30,23 @@
         gap: 2px;
 
         @media (max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    &__mobile-btn {
+        color: #7c6dff;
+        font-size: 12px;
+        line-height: 120%;
+        text-align: right;
+        margin-right: 16px;
+        font-weight: 700;
+        padding: 10px 15px;
+        border-radius: 5px;
+        border: 2px solid #7c6dff;
+        flex-shrink: 0;
+
+        @media (min-width: 1025px) {
             display: none;
         }
     }

@@ -104,8 +104,8 @@
             position: static;
         }
     }
-    
-    &:nth-child(2n) .service-card {
+
+    &.--right .service-card {
         order: -1;
 
         @media (max-width: 992px) {
