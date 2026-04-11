@@ -9,5 +9,7 @@ class Theme {
     public function __construct()
     {
         new Admin\OptionsPage();
+
+        new Admin\CPT\Cases();
     }
 }

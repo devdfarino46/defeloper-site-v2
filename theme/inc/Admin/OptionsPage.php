@@ -2,8 +2,6 @@
 
 namespace DefeloperTheme\Admin;
 
-use DefeloperTheme\Models;
-
 class OptionsPage {
     public function __construct()
     {

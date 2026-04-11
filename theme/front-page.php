@@ -2,5 +2,12 @@
 
 use DefeloperTheme\Twig\TwigManager;
 
+use DefeloperTheme\Models\Cases;
+
 $twig = new TwigManager();
-$twig->render( 'pages/home.twig', [] );
+
+// print_r(\DefeloperTheme\Models\Cases::get_all(1));
+
+$twig->render( 'pages/home.twig', [
+    'cases'     => Cases::get_all(3)
+] );

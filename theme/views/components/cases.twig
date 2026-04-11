@@ -4,63 +4,26 @@
         <p class="section-title">Кейсы — задача, решение, результат</p>
         <p class="cases__desc">Реальные проекты с деталями</p>
         <div class="cases__items">
+            {% for casesItem in cases %}
             <div class="case-card">
                 <div class="case-card__image">
-                    <img src="{{ get_template_directory_uri() }}/assets/img/cases/copterdrone.webp" alt="" loading="lazy" width="338" height="155">
+                    <img src="{{ casesItem.image }}" alt="" loading="lazy" width="338" height="155">
                 </div>
                 <div class="case-card__content">
-                    <h3 class="case-card__title">Интернет-магазин RC-техники</h3>
-                    <p class="case-card__desc">
-                        Каталог с фильтрами, корзина, ЮKassa, личный кабинет. Владелец управляет сам без программиста.
-                    </p>
+                    <h3 class="case-card__title">{{ casesItem.title }}</h3>
+                    <p class="case-card__desc">{{ casesItem.description }}</p>
                     <div class="case-card__result">
                         <i class="icon-check"></i>
-                        Результат: запущен с первого месяца, клиент сам добавляет товары
+                        {{ casesItem.result }}
                     </div>
                     <ul class="case-card__bottom">
-                        <li>Срок: <em>28 дней</em></li>
-                        <li>Стек: <em>WooCommerce</em></li>
+                        {% for bottomItem in casesItem.bottom %}
+                        <li>{{ bottomItem|raw }}</li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>
-            <div class="case-card">
-                <div class="case-card__image">
-                    <img src="{{ get_template_directory_uri() }}/assets/img/cases/la-brea.webp" alt="" loading="lazy" width="338" height="155">
-                </div>
-                <div class="case-card__content">
-                    <h3 class="case-card__title">Интернет-магазин la-brea.ru</h3>
-                    <p class="case-card__desc">
-                        Дизайн + верстка + интеграция CMS. Адаптив, быстрая загрузка, платёжная система, аналитика.
-                    </p>
-                    <div class="case-card__result">
-                        <i class="icon-check"></i>
-                        Результат: сдан за 21 день, PageSpeed 94, работает без доработок
-                    </div>
-                    <ul class="case-card__bottom">
-                        <li>Срок: <em>21 день</em></li>
-                        <li>Стек: <em>E-commerce</em></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="case-card">
-                <div class="case-card__image">
-                    <img src="{{ get_template_directory_uri() }}/assets/img/cases/local1best.webp" alt="" loading="lazy" width="338" height="155">
-                </div>
-                <div class="case-card__content">
-                    <h3 class="case-card__title">Сайт локальных услуг — все штаты США</h3>
-                    <p class="case-card__desc">
-                        Многостраничник под каждый город и штат. SEO-архитектура для органики. 300+ уникальных страниц
-                    </p>
-                    <div class="case-card__result">
-                        <i class="icon-check"></i>
-                        Результат: органический трафик с первого месяца по локальным запросам
-                    </div>
-                    <ul class="case-card__bottom">
-                        <li>Срок: <em>35 дней</em></li>
-                        <li>Страниц: <em>300+</em></li>
-                    </ul>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
