@@ -1,19 +1,19 @@
 <header class="header">
     <div class="container">
         <div class="logo">
-            <a href="#">
+            <a href="{{ home_url('/') }}">
                 <img src="{{ get_template_directory_uri() }}/assets/img/logo.svg" alt="">
             </a>
         </div>
         <div class="header__nav">
-            <div class="nav-link"><a href="#services">Услуги</a></div>
-            <div class="nav-link"><a href="#landing">Сайты</a></div>
-            <div class="nav-link"><a href="#shop">Магазины</a></div>
-            <div class="nav-link"><a href="#integrations">Интеграции</a></div>
-            <div class="nav-link"><a href="#layout">Верстка</a></div>
-            <div class="nav-link"><a href="#prices">Цены</a></div>
-            <div class="nav-link"><a href="#cases">Кейсы</a></div>
-            <div class="nav-link"><a href="#faq">FAQ</a></div>
+            <div class="nav-link" data-section="services"><a href="#services">Услуги</a></div>
+            <div class="nav-link" data-section="landing"><a href="#landing">Сайты</a></div>
+            <div class="nav-link" data-section="shop"><a href="#shop">Магазины</a></div>
+            <div class="nav-link" data-section="integrations"><a href="#integrations">Интеграции</a></div>
+            <div class="nav-link" data-section="layout"><a href="#layout">Верстка</a></div>
+            <div class="nav-link" data-section="prices"><a href="#prices">Цены</a></div>
+            <div class="nav-link" data-section="cases"><a href="#cases">Кейсы</a></div>
+            <div class="nav-link" data-section="faq"><a href="#faq">FAQ</a></div>
             <div class="nav-link nav-btn"><a href="javascript:void(0);" class="actionOpenContactModal">Обсудить проект</a></div>
         </div>
         <div class="header__mobile-btn actionOpenContactModal">

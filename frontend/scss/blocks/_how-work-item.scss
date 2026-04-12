@@ -33,4 +33,12 @@
         color: #72728f;
         line-height: 1.5;
     }
+
+    @media (any-hover: hover) {
+        &:hover &__num {
+            border-color: transparent;
+            background: #7c6dff;
+            color: #FFFFFF;
+        }
+    }
 }

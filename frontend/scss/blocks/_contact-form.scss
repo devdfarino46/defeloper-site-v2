@@ -57,6 +57,17 @@
         flex-direction: column;
     }
 
+    &__error {
+        &:empty {
+            display: none;
+        }
+
+        color: #d43e2d;
+        font-size: 12px;
+        font-weight: 700;
+        margin-top: 10px;
+    }
+
     &__submit-btn {
         margin-top: 6px;
         padding-left: 5px;

@@ -20,7 +20,8 @@ class TwigExtensions extends AbstractExtension {
             // Функция для дебага
             new TwigFunction( 'dump', 'var_dump' ),
 
-            new TwigFunction( 'getStatus', [ $this, 'getStatus' ] )
+            new TwigFunction( 'getStatus', [ $this, 'getStatus' ] ),
+            new TwigFunction( 'getSocials', [ $this, 'getSocials' ] )
         ];
     }
 
@@ -34,7 +35,13 @@ class TwigExtensions extends AbstractExtension {
         ];
     }
 
-    public function getStatus(): bool {
+    public function getStatus(): bool
+    {
         return \DefeloperTheme\Models\Options::getStatus();
+    }
+
+    public function getSocials( $limit = -1 ): array
+    {
+        return \DefeloperTheme\Models\Socials::get_all( $limit );
     }
 }

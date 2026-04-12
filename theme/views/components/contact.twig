@@ -5,18 +5,12 @@
             <p class="section-title">Обсудим <br>ваш проект?</p>
             <p class="contact__desc">Расскажите задачу — предложу решение, назову стоимость и срок. Даже если пока только идея. Консультация бесплатно.</p>
             <div class="contact__socials">
-                <a href="#" class="social-btn">
-                    <img src="{{ get_template_directory_uri() }}/assets/img/socials/telegram.svg" alt="" width="24" height="24">
-                    <span>Telegram</span>
+                {% for social in getSocials() %}
+                <a href="{{ social.url }}" class="social-btn">
+                    <img src="{{ social.icon }}" alt="" width="24" height="24">
+                    <span>{{ social.title }}</span>
                 </a>
-                <a href="#" class="social-btn">
-                    <img src="{{ get_template_directory_uri() }}/assets/img/socials/telegram.svg" alt="" width="24" height="24">
-                    <span>WhatsApp</span>
-                </a>
-                <a href="#" class="social-btn">
-                    <img src="{{ get_template_directory_uri() }}/assets/img/socials/telegram.svg" alt="" width="24" height="24">
-                    <span>Viber</span>
-                </a>
+                {% endfor %}
             </div>
             <ul class="contact__list">
                 <li><i class="icon-check"></i>Ответ в течение 1 часа</li>
@@ -31,6 +25,7 @@
                 <h2 class="contact-form__title">Получить расчёт</h2>
                 <p class="contact-form__desc">Заполните форму — отвечу в течение 15 минут</p>
                 <div class="contact-form__inputs">
+                    <input type="hidden" name="nonce" value="{{ ajax_nonce }}">
                     <div class="input">
                         <span class="input__label">Имя</span>
                         <span class="input__input">

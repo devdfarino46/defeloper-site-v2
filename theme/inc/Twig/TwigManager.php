@@ -9,9 +9,13 @@ class TwigManager {
     /** @var Enviroment */
     private $twig;
 
+    /** @var array */
+    private $context;
+
     public function __construct()
     {
         $this->init_twig();
+        $this->set_default_context();
     }
 
     private function init_twig() {
@@ -38,6 +42,13 @@ class TwigManager {
         $this->twig->addExtension( new TwigExtensions );
     }
 
+    private function set_default_context() {
+        $this->context = [
+            'ajax_nonce'    => wp_create_nonce( 'ajax_nonce' ),
+            'ajaxurl'       => admin_url( 'admin-ajax.php' )
+        ];
+    }
+
     private function log_error( $template, \Exception $e ) {
         $message = sprintf(
             '[Twig Error] Template: %s | Message: %s | File: %s | Line: %d',
@@ -52,8 +63,10 @@ class TwigManager {
     }
 
     public function render( $template, $context = [] ) {
+        $merged_context = array_merge( $this->context, $context );
+
         try {
-            echo $this->twig->render( $template, $context );
+            echo $this->twig->render( $template, $merged_context );
         } catch ( \Exception $e ) {
             $this->log_error( $template, $e );
 

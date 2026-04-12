@@ -20,4 +20,8 @@
             }
         }
     }
+
+    &.--active a {
+        color: #eaeaf6;
+    }
 }

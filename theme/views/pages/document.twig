@@ -1,5 +1,12 @@
 {% extends "layouts/base.twig" %}
 
 {% block body %}
-
+<div class="document">
+    <div class="container">
+        <h1 class="section-title --medium">{{ title }}</h1>
+        <div class="document__content">
+            {{ content|raw }}
+        </div>
+    </div>
+</div>
 {% endblock %}

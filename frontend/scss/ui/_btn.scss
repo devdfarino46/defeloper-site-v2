@@ -1,3 +1,5 @@
+@use '../base/icons' as icons;
+
 .btn {
     cursor: pointer;
     user-select: none;
@@ -13,6 +15,7 @@
     transition: .22s ease;
     box-shadow: 0 4px 22px rgba(124, 109, 255, .35);
     color: #eaeaf6;
+    text-decoration: none;
 
     [class^="icon-"], .icon {
         font-size: 1.2em;
@@ -40,6 +43,31 @@
                 border-color: #7c6dff;
                 color: #7c6dff;
             }
+        }
+    }
+
+    &.--loading {
+        position: relative;
+        color: transparent;
+        pointer-events: none;
+        opacity: .6;
+
+        span, i {
+            color: transparent;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+
+            @include icons.icon('spinner');
+            animation: spin 1s ease infinite;
+            color: #eaeaf6;
+            width: 24px;
+            height: 24px;
         }
     }
 }

@@ -1,20 +1,18 @@
 const bs = require("browser-sync").create();
-// const { createProxyMiddleware } = require('http-proxy-middleware');
+const { createProxyMiddleware } = require('http-proxy-middleware');
 
 bs.init({
     open: false,
     server: {
         baseDir: "./prebuild",
-        // middleware: [
-        //     createProxyMiddleware('/api', {
-        //         target: 'http://localhost:5888',
-        //         changeOrigin: true,
-        //         pathRewrite: {
-        //           '^/api': '/api' // или '/', если нужно убрать /api из пути
-        //         },
-        //         logLevel: 'debug' // для отладки
-        //     })
-        // ]
+        middleware: [
+            // Прокси для WordPress ajax
+            createProxyMiddleware('/wp-admin/admin-ajax.php', {
+                target: 'http://localhost:8080',
+                changeOrigin: true,
+                logLevel: 'debug'
+            }),
+        ]
     },
     port: 3000
 });

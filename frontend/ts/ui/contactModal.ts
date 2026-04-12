@@ -51,4 +51,8 @@ export default () => document.addEventListener('DOMContentLoaded', () => {
             close();
         }
     });
+
+    window.addEventListener('MyCloseModals', ((ev: CustomEvent) => {
+        close();
+    }) as EventListener);
 });
