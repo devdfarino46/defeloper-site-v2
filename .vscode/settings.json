@@ -9,6 +9,7 @@
         "pcre",
         "json",
         "dom",
-        "session"
+        "session",
+        "curl"
     ]
 }

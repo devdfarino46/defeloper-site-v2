@@ -2,6 +2,8 @@
 
 namespace DefeloperTheme\Ajax;
 
+use DefeloperTheme\Services\Telegram;
+
 class Order {
     public function __construct()
     {
@@ -15,6 +17,8 @@ class Order {
 
     private function handle_order()
     {
+        
+
         // Нормализация
         $name   = sanitize_text_field( $_POST['name'] ?? '' );
         $phone  = sanitize_text_field( $_POST['phone'] ?? '' );
@@ -27,6 +31,10 @@ class Order {
 
         $message_name   = !empty($name) ? ", $name" : '';
         $message        = "Спасибо за заявку{$message_name}! Я с вами скоро свяжусь.";
+
+        if ( Telegram::sendOrder( $name, $phone, $service ) === false ) {
+            wp_send_json_error( 'Произошла неизвестная ошибка, попробуйте написать через мессенджер' );
+        }
 
         wp_send_json_success( $message );
     }

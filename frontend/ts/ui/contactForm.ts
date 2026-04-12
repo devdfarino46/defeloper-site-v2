@@ -47,6 +47,7 @@ export default () => document.addEventListener('DOMContentLoaded', () => {
         modalOverlay.classList.remove('--show');
         orderSuccess.classList.remove('--show');
         successOpened = false;
+        window.location.replace('/');
     }
 
     document.addEventListener('click', ev => {
@@ -63,7 +64,7 @@ export default () => document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', ev => {
             ev.preventDefault();
 
-            if (loading(contactForm)) return;
+            // if (loading(contactForm)) return;
 
             const formData = new FormData(contactForm);
 
