@@ -1,5 +1,9 @@
 {% extends "layouts/base.twig" %}
 
+{% block seoTitle %}{{ seo_tags.title }}{% endblock %}
+{% block seoDescription %}{{ seo_tags.description }}{% endblock %}
+{% block seoKeywords %}{{ seo_tags.keywords }}{% endblock %}
+
 {% block body %}
 {% include "components/hero.twig" %}
 

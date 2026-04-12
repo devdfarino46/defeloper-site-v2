@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     {{ wp_head() }}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ get_template_directory_uri() }}/assets/libs/css/reset.css">
     <link rel="stylesheet" href="{{ get_template_directory_uri() }}/assets/css/style.css">
-    <title>Document</title>
+    <title>{% block seoTitle %}{% endblock %}</title>
+    <meta name="description" content="{% block seoDescription %}{% endblock %}">
+    <meta name="keywords" content="{% block seoKeywords %}{% endblock %}">
 
     <style>
         .header {

@@ -9,7 +9,7 @@
             <p class="contact-form__desc">Заполните форму — отвечу в течение 15 минут</p>
             <div class="contact-form__socials">
                 {% for social in getSocials() %}
-                <a href="{{ social.url }}" class="social-btn --medium">
+                <a href="{{ social.url }}" target="_blank" class="social-btn --medium">
                     <img src="{{ social.icon }}" alt="" width="24" height="24">
                     <span>{{ social.title }}</span>
                 </a>

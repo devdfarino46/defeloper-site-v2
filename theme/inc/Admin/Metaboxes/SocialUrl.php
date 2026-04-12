@@ -37,6 +37,11 @@ class SocialUrl {
 
     private function save_meta_box( $post_id )
     {
+        // Проверка прав
+        if ( ! current_user_can( 'edit_post', $post_id ) ) {
+            return;
+        }
+
         if ( isset( $_POST['social_url'] ) ) {
             update_post_meta( $post_id, 'social_url', esc_attr( $_POST['social_url'] ) );
         }
